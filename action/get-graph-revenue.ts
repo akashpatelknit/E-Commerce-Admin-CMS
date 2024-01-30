@@ -12,7 +12,7 @@ export const getGraphRevenue = async (storeId: string): Promise<GraphData[]> => 
       isPaid: true,
     },
     include: {
-      orderItem: {
+      orderItems: {
         include: {
           product: true,
         },
@@ -27,7 +27,7 @@ export const getGraphRevenue = async (storeId: string): Promise<GraphData[]> => 
     const month = order.createdAt.getMonth(); // 0 for Jan, 1 for Feb, ...
     let revenueForOrder = 0;
 
-    for (const item of order.orderItem) {
+    for (const item of order.orderItems) {
       revenueForOrder += item.product.price;
     }
 

@@ -50,11 +50,11 @@ export async function POST(req: Request) {
 				phone: session?.customer_details?.phone || '',
 			},
 			include: {
-				orderItem: true,
+				orderItems: true,
 			},
 		});
 		console.log('order',order)
-		const productIds = order.orderItem.map(
+		const productIds = order.orderItems.map(
 			(orderItem) => orderItem.productId
 		);
 
