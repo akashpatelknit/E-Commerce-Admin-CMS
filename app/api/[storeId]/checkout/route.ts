@@ -5,7 +5,8 @@ import { stripe } from '@/lib/stripe';
 import prismadb from '@/lib/prismadb';
 
 const corsHeaders = {
-	'Access-Control-Allow-Origin': 'http://localhost:3001',
+	'Access-Control-Allow-Origin':
+		'https://e-commerce-store-cms.vercel.app',
 	'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
 	'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
